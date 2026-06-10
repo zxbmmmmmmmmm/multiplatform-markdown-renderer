@@ -285,9 +285,7 @@ fun AnnotatedString.Builder.buildMarkdownAnnotatedString(
 
                     MarkdownElementTypes.CODE_SPAN -> {
                         pushStyle(annotatorSettings.codeSpanStyle)
-                        append(' ')
                         buildMarkdownAnnotatedString(content, child.children.innerList(), annotatorSettings)
-                        append(' ')
                         pop()
                     }
 
